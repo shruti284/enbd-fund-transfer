@@ -20,6 +20,12 @@ export class AccountStatementListComponent implements OnInit, OnDestroy {
   public statement: Statement | any;
   public accountDetails: AccountDetails | any;
 
+  public pageSize = 10;
+  public currentPage = 0;
+  public totalSize = 0;
+
+  public dataSource: Transaction[] | any;
+
   public TRANSACTION_TYPE = TransactionType;
 
   private subscriptions: Subscription = new Subscription();
@@ -56,6 +62,8 @@ export class AccountStatementListComponent implements OnInit, OnDestroy {
         .subscribe((data: Statement) => {
           this.statement = data;
           this.transactionList = data?.transactions;
+          this.dataSource = data?.transactions;
+          this.totalSize = data?.transactions.length;
         })
     );
   }
@@ -69,6 +77,19 @@ export class AccountStatementListComponent implements OnInit, OnDestroy {
           this.accountDetails = data;
         })
     );
+  }
+
+  public handlePage(e: any) {
+    this.currentPage = e.pageIndex;
+    this.pageSize = e.pageSize;
+    this.iterator();
+  }
+
+  private iterator() {
+    const end = (this.currentPage + 1) * this.pageSize;
+    const start = this.currentPage * this.pageSize;
+    const part = this.transactionList.slice(start, end);
+    this.dataSource = part;
   }
 
   ngOnDestroy(): void {
