@@ -1,0 +1,66 @@
+<ng-container>
+  <mat-card *ngIf="accountDetails">
+    <mat-card-title>Account Statement</mat-card-title>
+    <mat-card-subtitle>{{ accountDetails.firstName }} {{ accountDetails.lastName }} <br>
+    Account Number: {{ accountDetails.accountNumber }} <br>
+    Account Type: {{ accountDetails.accountType | titlecase }}
+</mat-card-subtitle>
+<mat-card-content><h3>Account Balance: {{ accountDetails.currency }} {{ accountDetails.accountBalance }}</h3></mat-card-content>
+  </mat-card>
+
+  <table mat-table [dataSource]="transactionList" class="mat-elevation-z8">
+    <!-- beneficiaryName Column -->
+    <ng-container matColumnDef="beneficiaryName">
+      <th mat-header-cell *matHeaderCellDef>Transaction</th>
+      <td mat-cell *matCellDef="let element">
+        <span>
+          <a [routerLink]="['/statement/transaction-details/', element.id]">{{
+            element.beneficiaryName
+          }}</a> </span
+        ><br />
+
+        <span class="comments">
+          {{ element.transactionComments }}
+        </span>
+      </td>
+    </ng-container>
+
+    <!-- transactionAmount Column -->
+    <ng-container matColumnDef="transactionAmount">
+      <th mat-header-cell *matHeaderCellDef>Amount</th>
+      <td mat-cell *matCellDef="let element">
+        <span [ngClass]="{'amount-debit': element.transactionType === TRANSACTION_TYPE.DEBIT, 
+        'amount-credit': element.transactionType === TRANSACTION_TYPE.CREDIT}">
+        {{ element.currency }}
+        {{ element.transactionAmount }}
+    </span>
+      </td>
+    </ng-container>
+
+    <!-- transactionType Column -->
+    <ng-container matColumnDef="transactionType">
+      <th mat-header-cell *matHeaderCellDef>Transaction Type</th>
+      <td mat-cell *matCellDef="let element">
+        <span class="amount-debit" *ngIf="element.transactionType === TRANSACTION_TYPE.DEBIT"> DEBIT</span>
+        <span class="amount-credit" *ngIf="element.transactionType === TRANSACTION_TYPE.CREDIT"> CREDIT</span>
+    </td>
+    </ng-container>
+
+     <!-- transactionDate Column -->
+    <ng-container matColumnDef="transactionDate">
+        <th mat-header-cell *matHeaderCellDef>Transaction Date</th>
+        <td mat-cell *matCellDef="let element">
+          {{element.transactionDate}}
+      </td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <mat-paginator #paginator [length]="transactionList.length"
+              [pageSize]="5"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>
+</ng-container>

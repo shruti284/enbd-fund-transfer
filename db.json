@@ -1,0 +1,242 @@
+{
+  "users": [
+    { "id": 101, "username": "Jane", "password": "Jane" },
+    { "id": 102, "username": "John", "password": "John" },
+    { "id": 103, "username": "Jack", "password": "Jack" }
+  ],
+  "accountDetails": [
+    {
+      "id": 101,
+      "firstName": "Jane",
+      "lastName": "Foster",
+      "email": "Jane.Foster@gmail.com",
+      "contactNumber": "01234455",
+      "countryCode": "971",
+      "accountNumber": "ENBD101000",
+      "bankName": "Emirates NBD",
+      "iban": "ENBD101",
+      "accountType": "current",
+      "accountBalance": "10000",
+      "currency": "AED"
+    },
+    {
+      "id": 102,
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "John.Doe@gmail.com",
+      "contactNumber": "01234455",
+      "countryCode": "971",
+      "accountNumber": "ENBD102000",
+      "bankName": "Emirates NBD",
+      "iban": "ENBD102",
+      "accountType": "current",
+      "accountBalance": "26000",
+      "currency": "AED"
+    },
+    {
+      "id": 103,
+      "firstName": "Jack",
+      "lastName": "Foster",
+      "email": "Jack.Foster@gmail.com",
+      "contactNumber": "01234455",
+      "countryCode": "971",
+      "accountNumber": "ENBD103000",
+      "bankName": "Emirates NBD",
+      "iban": "ENBD103",
+      "accountType": "current",
+      "accountBalance": "25000",
+      "currency": "AED"
+    }
+  ],
+  "accountStatement": [
+    {
+      "id": 101,
+      "currentBalance": "10000",
+      "transactions": [
+        {
+          "id": 10001,
+          "transactionType": "dr",
+          "transactionAmount": "500",
+          "transactionComments": "Shopping",
+          "beneficiaryName": "John Doe",
+          "transactionDate": "01/03/2022",
+          "beneficiaryAccountNumber": "738463857",
+          "beneficiaryBankName": "RAKBANK",
+          "accountBalance": "900",
+          "accountType":"current",
+          "currency": "AED"
+        },
+        {
+          "id": 10002,
+          "transactionType": "cr",
+          "transactionAmount": "1500",
+          "transactionComments": "Shopping",
+          "beneficiaryName": "John Doe",
+          "transactionDate": "18/03/2022",
+          "beneficiaryAccountNumber": "738463857",
+          "beneficiaryBankName": "RAKBANK",
+          "accountBalance": "900",
+          "accountType":"current",
+          "currency": "AED"
+        },
+        {
+          "id": 10003,
+          "transactionType": "cr",
+          "transactionAmount": "1500",
+          "transactionComments": "Shopping",
+          "beneficiaryName": "John Doe",
+          "transactionDate": "18/03/2022",
+          "beneficiaryAccountNumber": "738463857",
+          "beneficiaryBankName": "RAKBANK",
+          "accountBalance": "900",
+          "accountType":"current",
+          "currency": "AED"
+        },
+        {
+          "id": 10004,
+          "transactionType": "cr",
+          "transactionAmount": "1500",
+          "transactionComments": "Shopping",
+          "beneficiaryName": "John Doe",
+          "transactionDate": "18/03/2022",
+          "beneficiaryAccountNumber": "738463857",
+          "beneficiaryBankName": "RAKBANK",
+          "accountBalance": "900",
+          "accountType":"current",
+          "currency": "AED"
+        },
+        {
+          "id": 10005,
+          "transactionType": "cr",
+          "transactionAmount": "1500",
+          "transactionComments": "Shopping",
+          "beneficiaryName": "John Doe",
+          "transactionDate": "18/03/2022",
+          "beneficiaryAccountNumber": "738463857",
+          "beneficiaryBankName": "RAKBANK",
+          "accountBalance": "900",
+          "accountType":"current",
+          "currency": "AED"
+        },
+        {
+          "id": 10006,
+          "transactionType": "cr",
+          "transactionAmount": "1500",
+          "transactionComments": "Shopping",
+          "beneficiaryName": "John Doe",
+          "transactionDate": "18/03/2022",
+          "beneficiaryAccountNumber": "738463857",
+          "beneficiaryBankName": "RAKBANK",
+          "accountBalance": "900",
+          "accountType":"current",
+          "currency": "AED"
+        },
+        {
+          "id": 10007,
+          "transactionType": "cr",
+          "transactionAmount": "1500",
+          "transactionComments": "Shopping",
+          "beneficiaryName": "John Doe",
+          "transactionDate": "18/03/2022",
+          "beneficiaryAccountNumber": "738463857",
+          "beneficiaryBankName": "RAKBANK",
+          "accountBalance": "900",
+          "accountType":"current",
+          "currency": "AED"
+        },
+        {
+          "id": 10009,
+          "transactionType": "cr",
+          "transactionAmount": "1500",
+          "transactionComments": "Shopping",
+          "beneficiaryName": "John Doe",
+          "transactionDate": "18/03/2022",
+          "beneficiaryAccountNumber": "738463857",
+          "beneficiaryBankName": "RAKBANK",
+          "accountBalance": "900",
+          "accountType":"current",
+          "currency": "AED"
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "accountBalance": "26000",
+      "transactions": [
+        {
+          "id": 10011,
+          "transactionType": "dr",
+          "transactionAmount": "500",
+          "transactionComments": "Shopping",
+          "beneficiaryName": "Jane Doe",
+          "transactionDate": "01/03/2022",
+          "beneficiaryAccountNumber": "738463857",
+          "beneficiaryBankName": "RAKBANK",
+          "accountBalance": "900",
+          "accountType":"current",
+          "currency": "AED"
+        },
+        {
+          "id": 10012,
+          "transactionType": "cr",
+          "transactionAmount": "1500",
+          "transactionComments": "Shopping",
+          "beneficiaryName": "Jane Doe",
+          "transactionDate": "18/03/2022",
+          "beneficiaryAccountNumber": "738463857",
+          "beneficiaryBankName": "RAKBANK",
+          "accountBalance": "900",
+          "accountType":"current",
+          "currency": "AED"
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "accountBalance": "25000",
+      "transactions": [
+        {
+          "id": 10031,
+          "transactionType": "dr",
+          "transactionAmount": "500",
+          "transactionComments": "Shopping",
+          "beneficiaryName": "Jack Foster",
+          "transactionDate": "01/03/2022",
+          "beneficiaryAccountNumber": "738463857",
+          "beneficiaryBankName": "RAKBANK",
+          "accountBalance": "900",
+          "accountType":"current",
+          "currency": "AED"
+        },
+        {
+          "id": 10032,
+          "transactionType": "cr",
+          "transactionAmount": "1500",
+          "transactionComments": "Shopping",
+          "beneficiaryName": "Jane Doe",
+          "transactionDate": "18/03/2022",
+          "beneficiaryAccountNumber": "738463857",
+          "beneficiaryBankName": "RAKBANK",
+          "accountBalance": "900",
+          "accountType":"current",
+          "currency": "AED"
+        }
+      ]
+    }
+  ],
+  "transcationDetails" : 
+  [{
+    "id": 10001,
+    "account_id": 101,
+    "transactionType": "dr",
+    "transactionAmount": "500",
+    "transactionComments": "Shopping",
+    "beneficiaryName": "John Doe",
+    "transactionDate": "01/03/2022",
+    "beneficiaryAccountNumber": "738463857",
+    "beneficiaryBankName": "RAKBANK",
+    "accountBalance": "900",
+    "accountType":"current",
+    "currency": "AED"
+  }]
+}

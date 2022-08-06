@@ -1,0 +1,26 @@
+table {
+  width: 100%;
+}
+
+a {
+  color: rgba(0,0,0,.87);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00a0c6;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.comments {
+    color: rgb(158 141 141 / 87%);
+}
+
+.amount-debit {
+    color: red;
+}
+
+.amount-credit {
+    color: green;
+}
